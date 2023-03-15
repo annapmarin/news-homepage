@@ -43,7 +43,7 @@ body {
   color: hsl(35, 77%, 62%);
 }
 .nav__icon {
-  display: none;
+  display: none !important;
 }
 .nav__icon--close {
   display: none;
@@ -73,9 +73,9 @@ body {
     color: black;
   }
   .nav__icon {
-    display: block;
+    display: block !important;
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
     transition: all 0.2s ease;
     position: absolute;
     right: 20px;
@@ -123,6 +123,7 @@ body {
 .main__hero__content h1 {
   font-size: 3.2em;
   line-height: 1.2em;
+  font-weight: 800;
 }
 .main__hero__content--right p {
   color: hsl(236, 13%, 42%);
