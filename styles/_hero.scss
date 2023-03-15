@@ -1,0 +1,138 @@
+@use './variables';
+@import 'variables';
+
+.main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  &__hero {
+
+    max-width: 780px;
+
+    a {
+      cursor: pointer;
+    }
+
+    &__image {
+      width: 728px;
+      height: 300px;
+      cursor: pointer;
+    }
+
+    &__content {
+      display: flex;
+      margin-top: 2.3em;
+      gap: 4em;
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.2em;
+      }
+
+      &--right {
+        p {
+          color: $darkest-grey;
+          line-height: 1.7em;
+          margin-right: 5em;
+        }
+
+        button {
+          font-family: 'Inter', sans-serif;
+          padding: 1.3em;
+          border: none;
+          text-transform: uppercase;
+          letter-spacing: .3em;
+          color: white;
+          background-color: $red;
+          width: 12.2em;
+          margin-top: 2em;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  &__aside {
+    color: $white;
+    background-color: $black;
+    padding: 1.5em;
+    margin: 0 0 0 1em;
+    height: 520px;
+    width: 327px;
+    min-width: 327px;
+
+    &__title {
+      font-size: 2.2em;
+      color: $orange;
+      margin-bottom: .5em;
+    }
+
+    &__subtitle {
+      font-size: 1.2em;
+      padding: .7em 0 .5em 0;
+      color: $white;
+    }
+
+    &__subtitle:hover{
+      color: $orange;
+      cursor: pointer;
+    }
+
+    p {
+      padding-bottom: 1.5em;
+      font-size: .95em;
+      color: $gray;
+      line-height: 2em;
+    }
+
+    hr {
+      margin: 0 0 1.5em 0;
+      background-color: $darkest-grey;
+      border: none;
+      height: 1px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .main {
+    flex-direction: column;
+    max-width: 100vw;
+    gap: 4em;
+    align-items: center;
+    justify-content: center;
+
+    &__hero {
+      &__image {
+        content: url(../assets/images/image-web-3-mobile.jpg);
+        width: 100%;
+        height: auto;
+      }
+
+      &__content {
+        flex-direction: column;
+        gap: .8em;
+
+        h1 {
+          font-size: 2.5em;
+        }
+
+        &--right {
+          p{
+            margin-right: 0;
+          }
+          
+        }
+      }
+    }
+
+    &__aside {
+      margin: 0 auto;
+    }
+  }
+}
