@@ -9,6 +9,11 @@ menuIcon.addEventListener('click', () => {
   menu.style.transform = 'translateX(0)';
   window.addEventListener('scroll', disableScroll);
   blackCover.style.display = 'block';
+
+  document.body.addEventListener("touchmove", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+}, false);
 })
 
 menuIconClose.addEventListener('click', () => {

@@ -108,7 +108,7 @@ body {
     display: none;
     background-color: rgba(0, 0, 0, 0.364);
     width: 100vw;
-    height: 186vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -271,5 +271,7 @@ body {
 @media screen and (max-width: 1150px) {
   body {
     padding: 3em 1.2em;
+    width: 100vw;
+    overflow-x: hidden;
   }
 }/*# sourceMappingURL=index.css.map */
